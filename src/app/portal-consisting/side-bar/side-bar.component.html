@@ -1,0 +1,15 @@
+<div class="border-end bg-white margin-custom" id="sidebar-wrapper">   
+    <div class="sidebar-sticky">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <input type="checkbox" [(ngModel)]="masterSelected" (change)="checkUncheckAll()" name="list_name" value="m1" /> <strong>SELECT STATES</strong>
+            </li>
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item"  *ngFor="let item of statewiseList">
+                <input type="checkbox" (change)="isAllSelected()" [(ngModel)]="item.isSelected" name="list_name" value="{{item.statecode}}" />
+                {{item.statecode}}
+            </li>
+        </ul>
+    </div>
+</div>
